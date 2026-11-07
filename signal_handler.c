@@ -4,9 +4,9 @@
  */
 
 /**
- * Modified by:
+ * Modified by: Zeeshan Huq
  * 
- * Brief summary of modifications:
+ * Brief summary of modifications:remove exit at signal
  */
 
 
@@ -18,9 +18,8 @@
 /**
  * @brief Signal handler for SIGINT - prints a message and exits
  */
-void handle_signal() {
-    printf("Received a signal\n");
-    exit(1);
+void handle_signal(int signum) {
+    printf("Received a signal %d\n", signum);
 }
 
 int main() {
