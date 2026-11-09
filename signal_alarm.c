@@ -3,6 +3,8 @@
  * Modified by: Zeeshan Huq
  * 
  * Brief summary of program:
+ * sets a signal handler for SIGALRM, sets an alarm for 5 seconds, and waits for the alarm to trigger. 
+ * When the alarm goes off, it prints a message to the standard output.
 */
 
 #include <signal.h>
@@ -12,7 +14,7 @@
 static volatile sig_atomic_t alarm_triggered = 0;
 
 void handle_alarm(int signum) {
-    void()signum; // Unused parameter
+    printf("Received signal %d\n", signum);
     const char msg[] = "SIGALRM received!\n";
     write(STDOUT_FILENO, msg, sizeof(msg) - 1);
     alarm_triggered = 1;
