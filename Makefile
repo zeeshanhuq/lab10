@@ -1,7 +1,6 @@
 CC=gcc
-CFLAGS=-c -Wall -Wextra -g 
-TARGETS = signal_handler signal_alarm signal_segfault signal_sigaction \
-		  recv_signal send_signal
+CFLAGS=-Wall -Wextra -g 
+TARGETS = signal_handler signal_alarm signal_segfault signal_sigaction recv_signal send_signal
 all: $(TARGETS)
 
 %: %.c

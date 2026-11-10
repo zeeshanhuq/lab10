@@ -2,7 +2,7 @@
  * File: 
  * Modified by:
  * 
- * Brief summary of program:
+ * Brief summary of program: prints its pid and prints the PID of a signal sent by another process
  */
 
 
